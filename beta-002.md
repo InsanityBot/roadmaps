@@ -23,13 +23,13 @@ var &ticketId = Guid(this.ticket_id);
 entry:
 if(context.executor.isStaff) {
     this.move(584140343558275110);
-    embed.Description.replace_all(ticketId);
-    this.send_embed(embed);
+    &embed.Description.replace_all(&ticketId);
+    this.send_embed(&embed);
 }
 return;
 ~~~
 
-Kyuu supports if-else statements and switch-case statements for flow control. Functions are not allowed. Keywords are `const`, `var`, `this`, `env`, `if`, `else`, `switch`, `case`, `default`, `entry` and `return`. Allowed data types are `DiscordEmbed`, `DiscordMessage`, `Guid`, `int16`, `int32`, `int64`, `uint16`, `uint32`, `uint64` and `bool`. Allowed operators are `+`, `-`, `*` and `/`. Kyuu scripts cannot depend on each other.
+Kyuu supports if-else statements and switch-case statements for flow control. Functions are not allowed. Keywords are `const`, `var`, `this`, `env`, `if`, `else`, `switch`, `case`, `default`, `entry` and `return`. Allowed data types are `DiscordEmbed`, `DiscordMessage`, `Guid`, `int16`, `int32`, `int64`, `uint16`, `uint32`, `uint64` and `bool`. Allowed operators are `+`, `-`, `*` and `/`. Kyuu scripts cannot depend on each other. Variables and constants are prefixed with `&`-
 
 ## Modlogs
 
