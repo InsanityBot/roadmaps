@@ -29,7 +29,7 @@ if(context.executor.isStaff) {
 return;
 ~~~
 
-Kyuu supports if-else statements and switch-case statements for flow control. Functions are not allowed. Keywords are `const`, `var`, `this`, `env`, `if`, `else`, `switch`, `case`, `default`, `entry` and `return`. Allowed data types are `DiscordEmbed`, `DiscordMessage`, `Guid`, `int16`, `int32`, `int64`, `uint16`, `uint32`, `uint64` and `bool`. Allowed operators are `+`, `-`, `*` and `/`. Kyuu scripts cannot depend on each other. Variables and constants are prefixed with `&`-
+Kyuu supports if-else statements and switch-case statements for flow control. Functions are not allowed. Keywords are `const`, `var`, `this`, `env`, `if`, `else`, `switch`, `case`, `default`, `entry` and `return`. Allowed data types are `DiscordEmbed`, `DiscordMessage`, `Guid`, `int16`, `int32`, `int64`, `uint16`, `uint32`, `uint64` and `boolean`. Allowed operators are `+`, `-`, `*` and `/`. Kyuu scripts cannot depend on each other. Variables and constants are prefixed with `&`-
 
 ## Modlogs
 
