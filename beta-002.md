@@ -4,32 +4,7 @@ This roadmap indicates all planned changes to be included in the second beta rel
 
 ## Tickets
 
-2.0.0-beta.002 will ship with a complete ticket system. This includes the classic ticket commands and customizable message reactions, as well as transcripts and ticket metrics, but also the ticket scripting engine Kyuu. Kyuus syntax is largely identical to C++, with differences in how variables and constants are defined and its lack of a main method:
-
-~~~kyuu
-#event on_command_sent
-#category 584140343558275109
-#command supervisor
-
-const &embed = DiscordEmbed(
-    "{
-        "Color" = 3342362,
-        "Description" = "Ticket {0} moved to supervisor"
-    }"
-);
-
-var &ticketId = Guid(this.ticket_id);
-
-entry:
-if(context.executor.isStaff) {
-    this.move(584140343558275110);
-    &embed.Description.replace_all(&ticketId);
-    this.send_embed(&embed);
-}
-return;
-~~~
-
-Kyuu supports if-else statements and switch-case statements for flow control. Functions are not allowed. Keywords are `const`, `var`, `this`, `env`, `if`, `else`, `switch`, `case`, `default`, `entry` and `return`. Allowed data types are `DiscordEmbed`, `DiscordMessage`, `Guid`, `int16`, `int32`, `int64`, `uint16`, `uint32`, `uint64` and `boolean`. Allowed operators are `+`, `-`, `*` and `/`. Kyuu scripts cannot depend on each other. Variables and constants are prefixed with `&`-
+2.0.0-beta.002 will ship with a complete ticket system. This includes the classic ticket commands and customizable message reactions, as well as transcripts and ticket metrics.
 
 ## Modlogs
 
@@ -42,3 +17,7 @@ Kyuu supports if-else statements and switch-case statements for flow control. Fu
 ## Performance
 
 2.0.0-beta.002 will improve performance of temp-mutes and -bans by not loading each file from the file system every iteration and instead keeping them cached.
+
+## Notes
+
+Kyuu, originally scheduled for this release, will be merged into the wider scripting API.
